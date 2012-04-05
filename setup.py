@@ -4,7 +4,7 @@ import keyvaluestore
 
 setup(
     name="django-keyvaluestore",
-    version=keyvaluesure.__version__,
+    version=keyvaluestore.__version__,
     url='https://github.com/citylive/django-keyvaluestore',
     license='BSD',
     description="A Key-Value store for Django",

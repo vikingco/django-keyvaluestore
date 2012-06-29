@@ -12,7 +12,7 @@ class KeyValueStoreManager(models.Manager):
 
         if not cached:
             try:
-                obj = self.get(key=cached_key)
+                obj = self.get(key=key)
                 cache.set(cached_key, obj.value)
 
                 return obj.value

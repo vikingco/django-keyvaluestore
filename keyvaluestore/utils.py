@@ -1,6 +1,4 @@
 from keyvaluestore.models import KeyValueStore
-from keyvaluestore.exceptions import KeyNotExistingException
-
 
 def get_value_for_key(key):
     return KeyValueStore.objects.get_value_for_key(key)
@@ -9,7 +7,7 @@ def get_value_for_key(key):
 def get_value_or_default(key, default):
     try:
         value = get_value_for_key(key)
-    except KeyNotExistingException:
+    except KeyError:
         value = default
     return value
 

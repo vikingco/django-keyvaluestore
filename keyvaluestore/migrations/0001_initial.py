@@ -1,33 +1,25 @@
-# encoding: utf-8
-import datetime
-from south.db import db
-from south.v2 import SchemaMigration
-from django.db import models
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 
-class Migration(SchemaMigration):
-
-    def forwards(self, orm):
-        
-        # Adding model 'KeyValueStore'
-        db.create_table('keyvaluestore_keyvaluestore', (
-            ('key', self.gf('django.db.models.fields.CharField')(unique=True, max_length=200, primary_key=True, db_index=True)),
-            ('value', self.gf('django.db.models.fields.TextField')()),
-        ))
-        db.send_create_signal('keyvaluestore', ['KeyValueStore'])
+from django.db import models, migrations
 
 
-    def backwards(self, orm):
-        
-        # Deleting model 'KeyValueStore'
-        db.delete_table('keyvaluestore_keyvaluestore')
+class Migration(migrations.Migration):
 
+    dependencies = [
+    ]
 
-    models = {
-        'keyvaluestore.keyvaluestore': {
-            'Meta': {'object_name': 'KeyValueStore'},
-            'key': ('django.db.models.fields.CharField', [], {'unique': 'True', 'max_length': '200', 'primary_key': 'True', 'db_index': 'True'}),
-            'value': ('django.db.models.fields.TextField', [], {})
-        }
-    }
-
-    complete_apps = ['keyvaluestore']
+    operations = [
+        migrations.CreateModel(
+            name='KeyValueStore',
+            fields=[
+                ('key', models.CharField(max_length=200, unique=True, serialize=False, primary_key=True, db_index=True)),
+                ('value', models.TextField()),
+            ],
+            options={
+                'verbose_name': 'Key Value pair',
+                'verbose_name_plural': 'Key Value pairs',
+            },
+            bases=(models.Model,),
+        ),
+    ]

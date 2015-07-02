@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from keyvaluestore.models import KeyValueStore
+from .models import KeyValueStore
 
 class KeyValueStoreAdmin(admin.ModelAdmin):
     list_display = ('key', 'value')

@@ -5,11 +5,11 @@ import keyvaluestore
 setup(
     name="django-keyvaluestore",
     version=keyvaluestore.__version__,
-    url='https://github.com/citylive/django-keyvaluestore',
+    url='https://github.com/vikingco/django-keyvaluestore',
     license='BSD',
     description="A Key-Value store for Django",
     long_description=open('README.rst', 'r').read(),
-    author='Ingo Berben, City Live nv',
+    author='VikingCo NV',
     packages=['keyvaluestore'],
     zip_safe=False, # Don't create egg files, Django cannot find templates in egg files.
     include_package_data=True,

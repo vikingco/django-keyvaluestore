@@ -12,3 +12,6 @@ def get_git_version():
         return '%s.0000000' % datetime.now()
 
 __version__ = get_git_version()
+
+# Make the model available for import from here
+from keyvaluestore.models import KeyValueStore

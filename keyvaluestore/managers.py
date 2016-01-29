@@ -1,6 +1,5 @@
 from django.db import models
 from django.core.cache import cache
-from django.utils.translation import ugettext as _
 
 class KeyValueStoreManager(models.Manager):
     def get_value_for_key(self, key):
@@ -15,6 +14,6 @@ class KeyValueStoreManager(models.Manager):
 
                 return obj.value
             except:
-                raise KeyError(_(u"The request key '%s' could not be found." % (key,)))
+                raise KeyError(u"The request key '%s' could not be found." % key)
         else:
             return cached

@@ -2,6 +2,7 @@
 from setuptools import setup, find_packages
 import keyvaluestore
 
+
 setup(
     name="django-keyvaluestore",
     version=keyvaluestore.__version__,
@@ -10,7 +11,7 @@ setup(
     description="A Key-Value store for Django",
     long_description=open('README.rst', 'r').read(),
     author='VikingCo NV',
-    packages=['keyvaluestore'],
+    packages=find_packages(),
     zip_safe=False, # Don't create egg files, Django cannot find templates in egg files.
     include_package_data=True,
     classifiers=[

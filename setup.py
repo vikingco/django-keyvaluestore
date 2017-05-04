@@ -10,10 +10,10 @@ setup(
     license='BSD',
     description="A Key-Value store for Django",
     long_description=open('README.rst', 'r').read(),
-    author='VikingCo NV',
-    packages=find_packages(),
-    zip_safe=False, # Don't create egg files, Django cannot find templates in egg files.
-    include_package_data=True,
+    author='Unleashed NV',
+    author_email='operations@unleashed.be',
+    packages=find_packages('.'),
+    zip_safe=False,
     classifiers=[
         'Intended Audience :: Developers',
         'Programming Language :: Python',
